@@ -5,6 +5,9 @@ $.fn.DataTable.ext.pager.numbers_length = 10;
 $(document).ready(function () {
     $.getJSON("metadata.json").done(function (data) {
         $.each(data, function (idx, e) {
+            if (e['frame']) artifact = "frame";
+            else if (e['calibration_chart']) artifact = "chart";
+            else if (e['ruler']) artifact = "ruler";
             $('#ssynth-table').append(
             `<tr id="ssynth-${idx}" >
                 <td>${e['skin']}</td>
@@ -17,9 +20,7 @@ $(document).ready(function () {
                 <td>${e['hair_albedo']}</td>
                 <td>${e['lighting']}</td>
                 <td>${e['camera_distance']}</td>
-                <td>${e['frame']}</td>
-                <td>${e['calibration_chart']}</td>
-                <td>${e['ruler']}</td>
+                <td>${artifact}</td>
                 <td><a href="images/${e["filename"]}"><img src="images/${e["filename"]}" width="50"></a></td>
             </tr>`);
         });
