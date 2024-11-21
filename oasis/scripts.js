@@ -5,6 +5,7 @@ $.fn.DataTable.ext.pager.numbers_length = 10;
 $(document).ready(function () {
     $.getJSON("metadata.json").done(function (data) {
         $.each(data, function (idx, e) {
+            artifact = "none";
             if (e['frame']) artifact = "frame";
             else if (e['calibration_chart']) artifact = "chart";
             else if (e['ruler']) artifact = "ruler";
