@@ -16,7 +16,10 @@ $(document).ready(function () {
                 <td>${e['material']}</td>
                 <td>${e['hair_albedo']}</td>
                 <td>${e['lighting']}</td>
-                <td>${e['rotation']}</td>
+                <td>${e['camera_distance']}</td>
+                <td>${e['frame']}</td>
+                <td>${e['calibration_chart']}</td>
+                <td>${e['ruler']}</td>
                 <td><a href="images/${e["filename"]}"><img src="images/${e["filename"]}" width="50"></a></td>
             </tr>`);
         });
