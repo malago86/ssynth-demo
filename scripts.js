@@ -59,8 +59,6 @@ $(document).ready(function () {
                 }
             }
         );
-        Fancybox.bind('img', {
-            //
-          }); 
+        Fancybox.bind('img', {}); 
     });
 });
